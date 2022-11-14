@@ -24,18 +24,19 @@ const projects = [
     {
       projects.map((project) => (
         <div class="project">
-          <Title size={project.category === 'סטודיו' ? 'big' : 'h1'} weight="bold" color="#F9F9F9">
-            <Underline 
-                color="#C2FCB3"
-                width={'450'}>{'צילומים ב' + project.category}</Underline>
+          <Title
+            size={project.category === "סטודיו" ? "big" : "h1"}
+            weight="bold"
+            color="#F9F9F9"
+          >
+            <Underline color="#C2FCB3" width={"450"}>
+              {"צילומים ב" + project.category}
+            </Underline>
           </Title>
-          <div class="project__description"></div>
+          <div class="project__description" />
           <div class="project__img">
             {project.images.map((image) => (
-              <img
-                src={image}
-                alt={`תמונה מ- ${project.category}`}
-              >
+              <img src={image} alt={`תמונה מ- ${project.category}`} />
             ))}
           </div>
         </div>
@@ -45,15 +46,21 @@ const projects = [
 </div>
 
 <style lang="scss">
-
   .projects {
+    padding: 0em;
     padding-top: 4em;
-    background: linear-gradient(179.51deg, #1E2225 0.39%, #25272A 21.31%, rgba(16, 53, 50, 0.72) 98.37%);
+    background: linear-gradient(
+      179.51deg,
+      #1e2225 0.39%,
+      #25272a 21.31%,
+      rgba(16, 53, 50, 0.72) 98.37%
+    );
   }
 
   .project {
     margin-top: 2.5em;
     margin-bottom: 2.5em;
+    padding: 0;
 
     &__description {
       display: flex;
@@ -62,17 +69,14 @@ const projects = [
       text-align: left;
       padding-inline: 2rem;
       margin-bottom: 1em;
-
-      & > * {
-        margin: 0;
-        padding: 0;
-      }
     }
 
     img {
       width: 100%;
-     object-fit: contain;
-     margin: 10px 0;
+      object-fit: contain;
+      margin-top: 10px;
+      margin-bottom: 0;
+      padding: 0;
     }
   }
 </style>
