@@ -1,0 +1,143 @@
+:root {
+    --dark: "#131313"
+}
+.mainContainer {
+    width: 100%;
+    position: relative;
+    padding-top: 0em;
+    color: var(--c-white);
+    min-height: 800px;
+    max-height: 40em;
+}
+
+
+.container {
+    z-index: 1;
+    margin-top: 0;
+    margin-bottom: 3em;
+    padding-top: 10em;
+}
+
+.overlay {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--dark);
+    background: radial-gradient(124.98% 61.94% at 44.5% 57.43%, #ffc532 0%, rgba(0, 0, 0, 0.72) 100%);
+    mix-blend-mode: multiply;
+    opacity: 0.7;
+    min-height: 100%;
+}
+
+
+.img {
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: center;
+    opacity: 0.8;
+}
+
+.imgoverlay {
+    position: absolute;
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    opacity: 1;
+    filter: blur(0px);
+}
+
+
+.social {
+    margin-top: 4em;
+    display: flex;
+    flex-direction: row nowrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.socialItem {
+    cursor: alias;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.socialIconWrapper {
+    border-radius: 9999px;
+    width: 56px;
+    height: 56px;
+    background-color: var(--c-gray);
+    box-shadow: 2px 6px 9px 3px rgba(158, 62, 62, 0.57);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 150ms ease-in-out;
+
+    position: relative;
+    // border-image: linear-gradient(rgba(141, 255, 51, 1), rgba(154, 154, 154, 0.94));
+    &::before {
+        content: "";
+        border-radius: 9999px;
+        background-image: linear-gradient(rgba(141, 255, 51, 1), rgba(154, 154, 154, 0.34));
+        top: -1px;
+        bottom: -1px;
+        right: -1px;
+        left: -1px;
+        position: absolute;
+        z-index: -1;
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 4px 3px 9px rgba(158, 62, 62, 0.25);
+        transition: all 150ms ease-in-out;
+    }
+
+
+}
+
+.socialItemIcon {
+    width: 22px;
+    height: 22px;
+}
+
+.stroke {
+  -webkit-text-stroke: 2px rgba(0,0,0,0.17);
+}
+
+.cta_buttons {
+  margin-top: 40px;
+}
+
+
+.message {
+    margin-top: 100px;
+
+    p {
+        margin: 0 auto;
+        padding: 0;
+        color: rgba(255,255,255, 0.81);
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@cards/liron",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "@astrojs/solid-js": "*",
+    "astro": "*",
+    "sass": "*"
+  },
+  "dependencies": {
+    "astro-forms": "*",
+    "astro-imagetools": "^0.6.11",
+    "solid-js": "*"
+  }
+}

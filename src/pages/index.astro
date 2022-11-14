@@ -1,0 +1,167 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Link from "../components/common/Link/Link.astro";
+import Section from "../components/common/Section/section.astro";
+import Portfolio from "../components/Portfolio.astro";
+import Underline from "../components//common/Underline.astro";
+
+import MainAvatar from "../components/Avatar/MainAvatar";
+import Links from "../components/Links/Links";
+
+import Logo from '/logo2.png'
+import HeroBg from '../../public/section-bg.png';
+import Title from "../components/common/Title";
+---
+
+<Layout title="Forweb Technologies">
+	<div class="main-wrapper">
+		<MainAvatar img={Logo} />
+		<Links />
+
+		<Section 
+			title="רגעים לנצח" 
+			class="work-section" 
+			fold={true}
+			overlayImage={HeroBg}
+			>
+
+			<Title size="h2" weight="bold">
+				<Underline width='125'>רגעים לנצח</Underline>
+			</Title>
+
+			<p class="section-text">
+				שלום!
+				<br>
+				אני לירון, עם מצלמה ביד כ- 30 שנה.
+				<br>
+				אוהב לתעד ולתפוס רגעים.
+				משתדל לעורר את הרגש אצל הצופה בתמונות שלי כפי שאני חווה את הרגע.
+
+				<br>
+				<br>
+				מצלם בסטודיו
+				<br>
+				בטבע
+				<br>
+				באירועים ומגנטים.
+				
+				<br>
+				<br>
+				אשמח לתת לכם שירות ולתפוס את הרגע שלכם.
+			</p>
+			<Link
+				href="https://wa.me/+972508564794"
+				title="Contact via WhatsApp"
+				externalInNewTab={true}
+			>
+			פנו עכשיו
+			</Link>
+
+		</Section>
+
+		<Section title="העבודה שלי" class="portfolio">
+			<Portfolio />
+		</Section>
+
+		<!-- <Form /> -->
+	</div>
+
+	<footer>
+		<a href="https://www.forcard.co.il" target="_blank" rel="nofollow noopener">
+			<h1 class="footer__logo"><small>by</small> .forcard</h1>
+		</a>
+	</footer>
+</Layout>
+
+<style lang="scss" is:global>
+
+	.footer__logo {
+		font-weight: 700;
+		font-family: "ChunkFiveEx";
+	}
+
+	footer a {
+		text-decoration: none;
+		color: inherit;
+		transition: all 250ms ease-in-out;
+		&:hover {
+			color: #ffc532;
+		}
+	}
+
+	$primary: #ffc532;
+
+	.main-wrapper {
+		max-width: 44em;
+		margin-right: auto;
+		margin-left: auto;
+		// box-shadow: 4px 0 16px rgba(0,0,0,0.14),
+		// 			-4px 0 16px rgba(0,0,0,0.1);
+
+		box-shadow: 4px 0 16px rgba(40,70,40,0.88),
+					-4px 0 16px rgba(40, 70, 40, 0.88);
+
+	}
+
+	.work-section {
+		position: relative;
+		padding: 4em 2em;
+		background-color: #1F2327;
+		color: var(--c-white);
+		z-index: 9;
+		overflow: hidden;
+
+		
+	}
+
+	a.link {
+		display: inline-block;
+		text-decoration: none;
+		font-weight: bold;
+		color: #000;
+		background-color: $primary;
+		border-radius: 12px;
+		padding: 0.625em 3em;
+		margin-inline: auto;
+		transition: all 150ms ease-in;
+		box-shadow: 2px 2px 2px hsl(0, 0%, 0%);
+
+		&:hover {
+			background-color: lighten($primary, 5%);
+			transform-origin: 0px;
+			transform: translateY(-2px);
+			transition: all 150ms ease-out;
+			box-shadow: 4px 4px 0px hsl(0, 0%, 0%);
+		}
+		
+		&.primary {
+			background-color: black;
+			color: white;
+			box-shadow: 2px 2px 2px hsl(0, 0%, 35%);
+			transition: all 150ms ease-in-out;
+			&:hover {
+				transform: translateY(-1px);
+				transition: all 150ms ease-in-out;
+				box-shadow: 4px 4px 0px hsl(0, 0%, 35%);
+			}
+		}
+
+	}
+
+	p {
+		line-height: 160%;
+		text-align: center;
+		padding-bottom: 2em;
+		max-width: 30ch;
+		margin-inline: auto;
+		font-size: 18px;
+		color: #fdfdfd;
+	}
+
+	.section-text {
+		padding-top: 10px;
+	}
+
+
+
+</style>

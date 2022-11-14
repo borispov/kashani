@@ -1,0 +1,78 @@
+---
+import Title from "../components/common/Title";
+import Underline from "./common/Underline.astro";
+import { Img } from "astro-imagetools/components";
+
+const projects = [
+  {
+    category: "סטודיו",
+    images: ["/studio-1.jpg", "/studio-2.jpg", "/studio-3.jpg"],
+  },
+  {
+    category: "טבע",
+    images: ["/nature-1.jpg", "/nature-2.jpg", "/nature-3.jpg"],
+  },
+  {
+    category: "אירועים",
+    images: ["/event1.jpg", "/event2.jpg", "/event3.jpg"],
+  },
+];
+---
+
+<div>
+  <div class="projects">
+    {
+      projects.map((project) => (
+        <div class="project">
+          <Title size="h1" weight="bold" color="#F9F9F9">
+            <Underline 
+                color="#C2FCB3"
+                width={project.category.length * 15.5}>{project.category}</Underline>
+          </Title>
+          <div class="project__description"></div>
+          <div class="project__img">
+            {project.images.map((image) => (
+              <img
+                src={image}
+                alt={`תמונה מ- ${project.category}`}
+              >
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style lang="scss">
+
+  .projects {
+    padding-top: 4em;
+    background: linear-gradient(179.51deg, #1E2225 0.39%, #25272A 21.31%, rgba(16, 53, 50, 0.72) 98.37%);
+  }
+
+  .project {
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+
+    &__description {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: left;
+      padding-inline: 2rem;
+      margin-bottom: 1em;
+
+      & > * {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    img {
+      width: 100%;
+     object-fit: contain;
+     margin: 10px 0;
+    }
+  }
+</style>

@@ -1,0 +1,52 @@
+---
+export interface Props {
+  title: string;
+  class?: string;
+  fold?: boolean;
+  overlayImage?: string;
+}
+
+const props = { ...Astro.props } as Props;
+---
+
+<section class={props.class}>
+  {
+    props.overlayImage && (
+      <div class="overlay">
+        <img src={props.overlayImage} alt="" />
+      </div>
+    )
+  }
+  <div class="container">
+    <slot />
+  </div>
+</section>
+
+<style lang="scss">
+  section {
+    position: relative;
+    margin-inline: auto;
+
+    &.container {
+      padding: 1em 0.5em;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      z-index: -1;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.1;
+        object-position: center top;
+      }
+    }
+  }
+</style>
