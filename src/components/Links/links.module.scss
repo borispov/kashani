@@ -100,7 +100,8 @@
     &::before {
         content: "";
         border-radius: 9999px;
-        background-image: linear-gradient(rgba(141, 255, 51, 1), rgba(154, 154, 154, 0.34));
+        background-image: linear-gradient(rgb(16, 63, 96), rgba(251, 251, 251, 0.34));
+        background-image: linear-gradient(rgb(36, 118, 63), rgba(18, 71, 30, 0.34));
         top: -1px;
         bottom: -1px;
         right: -1px;
@@ -128,7 +129,17 @@
 }
 
 .cta_buttons {
+  display: inline-block;
   margin-top: 40px;
+  & button {
+    transition: all 150ms ease-out;
+    &:hover {
+        transform: translateY(-2px);
+        transition: all 150ms ease-in;
+        box-shadow: 0px 4px 9px rgba(40,40,40,0.2);
+        background-image: linear-gradient(rgb(36, 118, 63), rgba(18, 71, 30, 0.34));
+    }
+  }
 }
 
 

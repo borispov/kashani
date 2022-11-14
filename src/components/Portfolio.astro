@@ -24,10 +24,10 @@ const projects = [
     {
       projects.map((project) => (
         <div class="project">
-          <Title size="h1" weight="bold" color="#F9F9F9">
+          <Title size={project.category === 'סטודיו' ? 'big' : 'h1'} weight="bold" color="#F9F9F9">
             <Underline 
                 color="#C2FCB3"
-                width={project.category.length * 15.5}>{project.category}</Underline>
+                width={'450'}>{'צילומים ב' + project.category}</Underline>
           </Title>
           <div class="project__description"></div>
           <div class="project__img">
