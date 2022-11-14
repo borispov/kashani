@@ -4,6 +4,7 @@ import { astroImageTools } from "astro-imagetools"
 import solid from '@astrojs/solid-js';
 
 export default defineConfig({
+  base: "/",
   vite: {
     plugins: [
       {
