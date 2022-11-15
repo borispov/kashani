@@ -10,7 +10,7 @@ const { title } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
-<html lang="he-il">
+<html lang="he-il" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -28,8 +28,6 @@ const { title } = Astro.props as Props;
 
 <style is:global>
   html {
-    border: 1px solid red;
-    direction: rtl;
     text-align: center;
   }
 </style>

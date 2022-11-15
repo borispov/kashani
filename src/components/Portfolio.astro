@@ -29,11 +29,10 @@ const projects = [
             weight="bold"
             color="#F9F9F9"
           >
-            <Underline color="#C2FCB3" width={"450"}>
+            <Underline color="#C2FCB3">
               {"צילומים ב" + project.category}
             </Underline>
           </Title>
-          <div class="project__description" />
           <div class="project__img">
             {project.images.map((image) => (
               <img src={image} alt={`תמונה מ- ${project.category}`} />
@@ -47,7 +46,7 @@ const projects = [
 
 <style lang="scss">
   .projects {
-    padding: 0em;
+    padding: 0;
     padding-top: 4em;
     background: linear-gradient(
       179.51deg,
@@ -61,15 +60,7 @@ const projects = [
     margin-top: 2.5em;
     margin-bottom: 2.5em;
     padding: 0;
-
-    &__description {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      text-align: left;
-      padding-inline: 2rem;
-      margin-bottom: 1em;
-    }
+    max-width: 100%;
 
     img {
       width: 100%;
