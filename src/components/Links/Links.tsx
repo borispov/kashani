@@ -58,42 +58,6 @@ export default function Links(props) {
       </div>
 
       <div class={styles.social} >
-        <a href="#gallery" style="display:none">
-          <div class={styles.socialItem}>
-            <div class={styles.socialIconWrapper}>
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-              >
-                <rect width="32" height="32" fill="url(#pattern0)" />
-                <defs>
-                  <pattern
-                    id="pattern0"
-                    patternContentUnits="objectBoundingBox"
-                    width="1"
-                    height="1"
-                  >
-                    <use
-                      xlink:href="#image0_306_3045"
-                      transform="scale(0.01)"
-                    />
-                  </pattern>
-                  <image
-                    id="image0_306_3045"
-                    width="100"
-                    height="100"
-                    xlink:href="data:image/png;base64,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"
-                  />
-                </defs>
-              </svg>
-            </div>
-            גלריה
-          </div>
-       </a>
 
         <a href="tel:0503395555">
             <div class={styles.socialItem}>
