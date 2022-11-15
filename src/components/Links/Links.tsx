@@ -57,8 +57,8 @@ export default function Links(props) {
         </Title>
       </div>
 
-      <div class={styles.social}>
-        <a href="#gallery">
+      <div class={styles.social} >
+        <a href="#gallery" style="display:none">
           <div class={styles.socialItem}>
             <div class={styles.socialIconWrapper}>
               <svg
@@ -93,7 +93,7 @@ export default function Links(props) {
             </div>
             גלריה
           </div>
-        </a>
+       </a>
 
         <a href="tel:0503395555">
             <div class={styles.socialItem}>
