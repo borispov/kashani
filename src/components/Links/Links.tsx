@@ -32,7 +32,7 @@ function HeroBottomMessage(props) {
         </defs>
       </svg>
 
-      <p>אשמח לתפוס את הרגע שלכם</p>
+      <p>אשמח לתת שירות ולתפוס את הרגע שלכם</p>
     </div>
   );
 }
@@ -47,13 +47,12 @@ export default function Links(props) {
 
       <div class={styles.container}>
         <Title size="big" weight="bold">
-          לירון סטודיו נייד
-        </Title>
-        <Title size="h2" weight="reg">
-          מצלם ב-
+        לירון סטודיו לצילום
         </Title>
         <Title weight="bold" size="h3">
-          <span class={styles.stroke}>סטודיו | טבע | אירועים ומגנטים</span>
+          <span class={styles.stroke}>
+            צילומי סטודיו | צילומי חוץ | אירועים ומגנטים
+            </span>
         </Title>
       </div>
 

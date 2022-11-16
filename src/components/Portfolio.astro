@@ -10,7 +10,7 @@ const projects = [
   },
   {
     category: "טבע",
-    images: ["/nature-1.jpg", "/nature-2.jpg", "/nature-3.jpg"],
+    images: ["/nature-1.jpg", "/nature-3.jpg"],
   },
   {
     category: "אירועים",
@@ -29,9 +29,7 @@ const projects = [
             weight="bold"
             color="#F9F9F9"
           >
-            <Underline color="#C2FCB3">
               {"צילומים ב" + project.category}
-            </Underline>
           </Title>
           <div class="project__img">
             {project.images.map((image) => (
@@ -70,4 +68,6 @@ const projects = [
       padding: 0;
     }
   }
+
+	
 </style>
