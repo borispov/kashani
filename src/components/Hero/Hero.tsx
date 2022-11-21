@@ -1,38 +1,15 @@
 import Title from "../common/Title";
-import styles from "./links.module.scss";
+import styles from "./hero.module.scss";
 import Button from "../common/Button";
 
 function HeroBottomMessage(props) {
   return (
     <div class={styles.message}>
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-      >
-        <rect width="32" height="32" fill="url(#pattern0)" />
-        <defs>
-          <pattern
-            id="pattern0"
-            patternContentUnits="objectBoundingBox"
-            width="1"
-            height="1"
-          >
-            <use xlink:href="#image0_306_2935" transform="scale(0.01)" />
-          </pattern>
-          <image
-            id="image0_306_2935"
-            width="100"
-            height="100"
-            xlink:href="data:image/png;base64,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"
-          />
-        </defs>
-      </svg>
 
-      <p>אשמח לתת שירות ולתפוס את הרגע שלכם</p>
+      <p>
+      תגיעו לגוף שחלמתם עליו ב- 6 חודשים
+מקסימום 6 חודשים.
+        </p>
     </div>
   );
 }
@@ -43,16 +20,19 @@ export default function Links(props) {
       <div class={styles.overlay}></div>
       <div class={styles.overlayBottom}></div>
       <img class={styles.imgoverlay} src="/hero-overlay.png" alt="" />
-      <img class={styles.img} src="/hero-bg2.png" alt="צילום טבע" />
+      <img class={styles.img} src="/hero-bg.png" alt="צילום טבע" />
 
       <div class={styles.container}>
-        <Title size="big" weight="bold">
-        לירון סטודיו לצילום
+        <Title size="h1" weight="bold">
+        מאמן כושר אישי | Personal Trainer
         </Title>
         <Title weight="bold" size="h3">
           <span class={styles.stroke}>
-            צילומי סטודיו | צילומי חוץ | אירועים ומגנטים
+            Fitness | Nutrition | Aesthetics
             </span>
+        </Title>
+        <Title size="h3">
+          אשקלון 📍
         </Title>
       </div>
 
@@ -161,6 +141,37 @@ export default function Links(props) {
         </Button>
       </div>
       <HeroBottomMessage />
+
+			<Title size="big" weight="bold">
+				<svg 
+					class="blob-1"
+					width="427" height="41" viewBox="0 0 427 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M233.987 18.2233C184.751 19.2634 135.516 21.8356 86.4873 26.0238C59.7084 28.3108 28.6069 28.0368 2.6276 35.8318C0.581016 36.4468 0.989228 38.3201 1.03396 38.5046C1.12343 38.8905 1.49808 40.1709 3.13647 40.2324C3.26508 40.238 4.14301 40.1263 4.4841 40.0816C12.1336 39.075 19.7608 37.9007 27.4159 36.9501C53.8594 33.6566 80.3699 31.1738 106.925 28.993C142.176 26.0965 177.722 24.5475 213.068 23.3453C232.421 22.6799 252.233 23.5578 271.653 22.199C278.766 22.1598 285.889 22.1543 293.013 22.1767C322.801 22.283 352.554 23.4125 382.303 24.9614C391.865 25.4591 399.167 25.9959 408.539 26.3593C412.101 26.4991 417.754 26.5942 421.68 26.6557C422.25 26.6669 423.682 26.678 424.302 26.6836C424.386 26.6948 424.47 26.6948 424.554 26.6948C424.856 26.6892 425.007 26.6724 425.035 26.6668C427.165 26.3536 426.97 24.3518 426.908 24.0387C426.897 23.9716 426.584 22.2773 424.761 22.2158C424.487 22.2046 422.513 22.1935 421.753 22.1823C417.855 22.1208 412.246 22.0257 408.712 21.8915C399.363 21.5281 392.077 20.9913 382.532 20.4936C352.717 18.9447 322.89 17.8095 293.03 17.7033C289.541 17.6921 286.057 17.6865 282.579 17.6921C282.322 17.3566 281.925 17.049 281.293 16.8868C280.717 16.7358 276.579 16.5906 274.98 16.4564C263.427 15.5113 263.768 15.5505 251.053 14.7732C231.795 13.5934 228.865 13.3248 208.841 12.8272C184.332 12.2177 159.818 12.05 135.303 12.0332C170.509 10.3333 205.95 10.5625 241.105 10.0481C257.002 9.81882 272.894 9.40507 288.792 9.52809C294.249 9.57282 299.701 9.77416 305.159 9.84126C306.288 9.85803 309.19 10.0537 309.61 9.95866C310.996 9.65112 311.293 8.61661 311.377 8.11335C311.422 7.82258 311.623 6.10036 309.559 5.49645C300.35 2.8124 283.356 2.91861 274.41 2.3874C224.307 -0.576238 174.105 0.251326 123.98 2.3706C103.285 3.24292 82.6569 4.48996 62.0457 6.50299C54.8379 7.20196 47.6133 7.80028 40.4335 8.7397C39.2704 8.89067 36.6479 9.10865 35.3786 9.33792C34.7243 9.46094 34.2602 9.63987 34.0421 9.7573C33.0244 10.3333 32.8511 11.1832 32.8455 11.7536C32.8399 12.1674 32.9461 13.7163 35.0039 14.1133C55.9339 18.2121 78.7035 16.6129 99.7453 16.557C136.075 16.4675 172.41 16.3947 208.729 17.3006C221.014 17.6081 226.84 17.8263 233.987 18.2233ZM244.449 5.52443C204.367 4.27747 164.241 5.14411 124.165 6.83842C103.553 7.71073 83.0092 8.95216 62.4818 10.954C59.2107 11.2727 55.9451 11.5691 52.6795 11.8878C68.3532 13.0117 84.5078 12.1283 99.7341 12.0836L110.185 12.0612C110.101 11.8487 110.045 11.6194 110.029 11.3846C109.934 10.1544 110.856 9.07516 112.086 8.9801C154.874 5.73129 198.166 6.20095 241.044 5.57467C242.179 5.5579 243.314 5.54121 244.449 5.52443Z" fill="#f9f9f9"/>
+				</svg>
+			</Title>
+
+			<p class="section-text">
+
+
+<Title size="h1">
+כל אחד יכול!
+</Title>
+
+      השיטה שלי מתמקדת
+
+				<br />
+בתפריט מגוון על פי
+				<br />
+המאכלים שהלקוח אוהב לאכול - מה שיתן מוטיבציה וכח לסיים את התהליך בהצלחה. בנוסף, כל מה שאני צריך
+				<br />
+זה רק 2-3 אימונים בשבוע.
+				<br />
+הכי פשוט. הכי נוח.
+				<br />
+בואו עכשיו!
+
+			</p>
+
     </div>
   );
 }

@@ -1,0 +1,67 @@
+---
+const steps = [
+    {
+        number: '01',
+        text: 'תפנו אליי. אנחנו נכיר ונדייק את המטרה שלכם ונתאים תוכנית ראשונית',
+    },
+    {
+        number: '02',
+        text: 'בניית תוך אימונים אישית ותפריט תזונה מותאם תוך 24 שעות',
+    },
+    {
+        number: '03',
+        text: 'ליווי הכוונה ותמיכה בכל שלב בתהליך.',
+    },
+]
+---
+
+<section>
+    {
+
+        steps.map(step => (
+            <div class="step">
+                <span class="step-num">{step.number}</span>
+                <p class="step-text">
+                    {step.text}
+                </p>
+            </div>
+        ))
+
+    }
+</section>
+
+<style lang="scss">
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: right;
+        padding-inline: 50px;
+    }
+
+    .step {
+        display: flex;
+        flex-direction: column;
+
+        .step-num {
+            font-size: 88px;
+            letter-spacing: -2.5px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        p {
+            margin-top: 0;
+            line-height: 1.65;
+            text-align: right;
+            width: 280px;
+            font-size: 22px;
+            color: #f9f9f9;
+        }
+
+    }
+
+
+
+</style>
