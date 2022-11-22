@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro-imagetools/config';
-import { astroImageTools } from "astro-imagetools"
 
 import solid from '@astrojs/solid-js';
 
@@ -15,10 +14,5 @@ export default defineConfig({
       },
     ],
   },
-
-  experimental: {
-    integrations: true,
-  },
-
-  integrations: [solid(), astroImageTools],
+  integrations: [solid() ],
 });

@@ -1,6 +1,5 @@
 ---
 import Title from "../common/Title";
-import Button from "../common/Button/Button.astro";
 ---
 
 <main class="mainContainer">
@@ -10,7 +9,7 @@ import Button from "../common/Button/Button.astro";
   <img class="img" src="/hero-bg.png" alt="צילום טבע" />
 
   <div class="container">
-    <Title size="h1" weight="bold">מאמן כושר אישי | Personal Trainer</Title>
+    <Title size="h1" weight="bold">מאמן כושר אישי</Title>
     <Title weight="bold" size="h3">
       <span class="stroke"> Fitness | Nutrition | Aesthetics</span>
     </Title>
@@ -202,10 +201,10 @@ import Button from "../common/Button/Button.astro";
     background-color: var(--dark);
     background: radial-gradient(
       124.98% 61.94% at 44.5% 57.43%,
-      #ffc532 0%,
-      rgba(0, 0, 0, 0.72) 100%
+      #481906 0%,
+      rgba(44, 4, 4, 0.72) 100%
     );
-    mix-blend-mode: multiply;
+    mix-blend-mode: overlay;
     opacity: 0.7;
     min-height: 100%;
   }
@@ -327,12 +326,13 @@ import Button from "../common/Button/Button.astro";
       justify-content: space-between;
       font-size: 1rem;
       transition: all 150ms ease-out;
-      box-shadow: 4px 4px 9px rgba(255, 255, 255, 0.81) ;
+      box-shadow: 0px 2px 16px rgba(255, 255, 255, 0.21) ;
+      text-decoration: none;
       
       &:hover {
         transform: translateY(-1px);
         transition: all 150ms ease-in;
-        box-shadow: 8px 8px 9px rgba(178, 33, 33, 0.81) ;
+        box-shadow: 0px 0px 2px rgba(178, 33, 33, 0.11) ;
         background-image: linear-gradient(
           rgb(112, 37, 13),
           rgba(47, 24, 13, 0.34)
@@ -377,8 +377,16 @@ import Button from "../common/Button/Button.astro";
     .blob-wrap {
       z-index: -1;
       position: absolute;
-      margin-top: 15%;
-      margin-right: 18%;
+      top: 20%;
+      right: 50%;
+      min-width: 70%;
+      transform: translateX(50%);
+
+      @media screen and (max-width: 360px) {
+        right: 0%;
+        width: 100%;
+        transform: translateX(0%);
+      }
     }
   }
 </style>

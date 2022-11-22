@@ -27,7 +27,7 @@ const projects = [
           </Title>
           <div class="project__img">
             {project.images.map((image) => (
-              <img src={image} alt={`תמונה מ- ${project.category}`} />
+              <img class="portfolio-img" src={image} alt={`תמונה מ- ${project.category}`} />
             ))}
           </div>
         </div>
@@ -85,7 +85,7 @@ const projects = [
   }
 
   section {
-    background-image: url('black-gradient-2.jpg');
+    background-image: url('/black-gradient-2.jpg');
     // background-image: url('black-gradient.jpg');
   }
 
@@ -109,8 +109,7 @@ const projects = [
 
     .project__img {
       img {
-        width: 90%;
-        margin-top: 40px;
+        width: 66%;
         margin-bottom: 0;
         margin: 40px auto 0 auto;
       }
@@ -141,24 +140,21 @@ const projects = [
       justify-content: space-between;
       font-size: 1rem;
       transition: all 150ms ease-out;
-      box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.81) ;
-      background-image: linear-gradient(
-        rgb(112, 37, 13),
-        rgba(47, 24, 13, 0.34)
-      );
+      box-shadow: 0px 2px 16px rgba(255, 255, 255, 0.21) ;
       text-decoration: none;
-      border-image: linear-gradient(
-      rgba(141, 255, 51, 1),
-      rgba(154, 154, 154, 0.94)
-      );
       
       &:hover {
         transform: translateY(-1px);
         transition: all 150ms ease-in;
-        box-shadow: 8px 8px 9px rgba(178, 33, 33, 0.81) ;
+        box-shadow: 0px 0px 2px rgba(178, 33, 33, 0.11) ;
+        background-image: linear-gradient(
+          rgb(112, 37, 13),
+          rgba(47, 24, 13, 0.34)
+        );
       }
     }
   }
+
 
 	
 </style>
